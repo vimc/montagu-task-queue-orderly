@@ -25,14 +25,14 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v1
 
-    name: Install orderly
-    run: |
-      install.packages("drat")
-      drat:::add("vimc")
-      install.packages("orderly")
-    shell: Rscript {0}
+      - name: Install orderly
+        run: |
+          install.packages("drat")
+          drat:::add("vimc")
+          install.packages("orderly")
+        shell: Rscript {0}
 
-    name: Build
-    run: |
-      orderly:::run_orderly_demo(".")
-    shell: Rscript {0}
+      - name: Build
+        run: |
+          orderly:::run_orderly_demo(".")
+        shell: Rscript {0}
