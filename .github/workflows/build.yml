@@ -12,7 +12,7 @@ name: build
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: macOS-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       VAULTR_TEST_SERVER_INSTALL: true
@@ -30,6 +30,7 @@ jobs:
           install.packages("drat")
           drat:::add("vimc")
           install.packages("orderly")
+          loadNamespace("orderly")
         shell: Rscript {0}
 
       - name: Build
