@@ -1,0 +1,11 @@
+script: script.R
+parameters:
+  touchstone: ~
+  touchstone_name: ~
+artefacts:
+  staticgraph:
+    description: A graph of things
+    filenames: mygraph.png
+author: Researcher McResearcherface
+requester: Funder McFunderface
+comment: This is a comment

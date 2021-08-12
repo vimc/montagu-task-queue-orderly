@@ -1,0 +1,10 @@
+- name: diagnostic
+  parameters:
+    touchstone: touchstone1
+    touchstone_name: touchstonename1
+
+- name: diagnostic-param
+  parameters:
+    nmin: 0
+    touchstone: touchstone2
+    touchstone_name: touchstonename2

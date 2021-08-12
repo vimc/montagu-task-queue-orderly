@@ -1,0 +1,25 @@
+database:
+  source:
+    driver: RSQLite::SQLite
+    instances:
+      default:
+          dbname: source.sqlite
+      other:
+          dbname: other.sqlite
+
+fields:
+  requester:
+    required: true
+    type: character
+  author:
+    required: true
+    type: character
+  comment:
+    required: false
+    type: character
+
+changelog:
+  internal:
+    public: false
+  public:
+    public: true
